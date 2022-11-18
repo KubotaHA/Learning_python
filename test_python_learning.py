@@ -27,21 +27,27 @@ class Test_python_learning(unittest.TestCase):
                 # テスト対象の実行(異常系)
                 python_learning.division(6, 0)
 
-    # def test_addition_01(self):
-    #     self.assertEqual(
-    #         # テスト対象の実行
-    #         python_learning.addition(6, 3),
-    #         # 期待する値
-    #         9
-    #     )
+    def test_addition_01(self):
+        self.assertEqual(
+            # テスト対象の実行
+            python_learning.addition(6, 3),
+            # 期待する値
+            9
+        )
 
-    # def test_subtraction_01(self):
-    #     self.assertEqual(
-    #         # テスト対象の実行
-    #         python_learning.subtraction(6, 3),
-    #         # 期待する値
-    #         3
-    #     )
+    def test_addition_02(self):
+            # 例外のテスト
+            with self.assertRaises(Exception):
+                # テスト対象の実行(異常系)
+                python_learning.addition(6, "a")
+
+    def test_subtraction_01(self):
+        self.assertEqual(
+            # テスト対象の実行
+            python_learning.subtraction(6, 3),
+            # 期待する値
+            3
+        )
 
 
 if __name__ == "__main__":
