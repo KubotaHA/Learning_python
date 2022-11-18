@@ -3,34 +3,32 @@
 
 import sys
 
-# def check_if_int(number_list):
-#     for i in number_list:
-#         if not isinstance(i, int):
-#             raise TypeError("TypeError: Unsupported type. Expected type is 'int'")
+def check_if_int(number_list):
+    for i in number_list:
+        if not isinstance(i, int):
+            raise TypeError("TypeError: Unsupported type. Expected type is 'int'")
 
 # 掛け算
 def multiplication(a, b):
-    for i in [a, b]:
-        if not isinstance(i, int):
-            raise TypeError("TypeError: Unsupported type. Expected type is 'int'")
+    check_if_int([a, b])
     return a * b
 
 # 割り算
 def division(a, b):
-    for i in [a, b]:
-        if not isinstance(i, int):
-            raise TypeError("TypeError: Unsupported type. Expected type is 'int'")
+    check_if_int([a, b])
     if b == 0:
         raise ZeroDivisionError("ZeroDivisionError: division by zero")
     return a / b
 
 # 足し算
-# def addition(a, b):
-#     return 9
+def addition(a, b):
+    check_if_int([a, b])
+    return a + b
 
 # 引き算
-# def subtraction(a, b):
-#     return 3
+def subtraction(a, b):
+    check_if_int([a, b])
+    return a - b
 
 def main():
     try:
